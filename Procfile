@@ -1,2 +1,2 @@
 release: python manage.py migrate
-web: gunicorn superlists.wsgi
+web: gunicorn tutorial.wsgi
