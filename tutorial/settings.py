@@ -25,7 +25,7 @@ SECRET_KEY = 'z6=+3ryxl!svu1i&7-fbblr%-1$&hosbm6@$s-w0khbm3e)r=4'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['ms-django-rest-tutorial.herokuapp.com', '127.0.0.1']
 
 
 # Application definition
