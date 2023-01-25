@@ -1,0 +1,16 @@
+language: python
+python:
+- 3.7.4
+dist: xenial
+services:
+- xvfb
+install:
+- pip install -r requirements.txt
+script:
+- python manage.py collectstatic
+deploy:
+  provider: heroku
+  app: ms-django-rest-tutorial
+  on: MS_ICTRAINING-708_Django-REST-Tutorial
+  api_key:
+    secure: es+U3t4sZs2WrN7dIyG2i0tDAlJbXFzI7RuZYHl7faK4b8Ofu5EbChMt9t4LjbAxY8Up4+i1b40Cp/3qYgv++TmB35hv5P0EBPP0vphYTMoWWwd1ourpdtTBKU25jMrVWGTTYWmCbmxj7AwN6VJcA7WyhwN63+zxJyz0r8AZyiV0avQCC6Sb8gMhh+LJsb2VQyA2MeTunHCO20Ey8ZoOrI93RBve6da6sKmLs5yTDeiBpOMm297ufx27WUxlAHKHx0LZ7VcVEOV9j5WpBOf5+KmrSSsrVZHLsqh/dB5poWLyai73E1JD90ZG9V4JkD1j1Eopl6EZ0Xo4fSSWdsvMDEucydRm99/WNAd5wjmhGBCF61tmV/mRO2QJ/uoROPj2wG6vjg0yGGv+KUIL4Ic/wGZTT/+XF8HPwSH9obYSkzTjIyF5X6oBMH1uM0/2q53HQsYCsnDl3ZzrE+prgjlE/FiAkARicd1DZiloq2rOoP+JnZQqmH6nQIGYteHEx0dU9F5WmeW/B1C1ze8QT677YQRoRtwmPzTL0eh4oG/J0y4Q28hE8C5XsDh3NbQXytL1K5LmWe+OybMn/1qLW3wAVtce0HrjuSdZcwPH1SilLpYPDVRRaz+GoyECfSqy7l7+3YdSEvOZI7wK2qaFIEo+RQMUld++9gLm+C3r0ybfQ6s=
