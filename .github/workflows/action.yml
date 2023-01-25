@@ -1,0 +1,22 @@
+name: 'Test Environment Variables'
+on:
+  workflow_dispatch:
+  push:
+
+env:
+  MEDIA_ROOT: ${{ vars.MEDIA_ROOT }}
+  EMAIL_FILE_PATH: ${{ vars.EMAIL_FILE_PATH }}
+  EDC_BASE_DIR_FOR_LOGS: ${{ vars.EDC_BASE_DIR_FOR_LOGS }}
+  COVERALLS_REPO_TOKEN_STR: ${{ secrets.COVERALLS_REPO_TOKEN_STR }}
+
+jobs:
+  display-variables:
+    name: Display Variables
+    runs-on: ubuntu-latest
+    steps:
+      - name: Use variables
+        run: |
+          echo "media root : ${MEDIA_ROOT}"
+          echo "email file path : ${EMAIL_FILE_PATH}"
+          echo "edc base dir logs : ${EDC_BASE_DIR_FOR_LOGS}"
+          echo "coveralls repo token str  : ${COVERALLS_REPO_TOKEN_STR}"
