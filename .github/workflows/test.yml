@@ -3,8 +3,6 @@ name: 'Test Environment Variables'
 on:
   workflow_dispatch:
   push:
-    branches:
-      - feature_github_action
 
 env:
   MEDIA_ROOT: ${{ vars.MEDIA_ROOT }}
