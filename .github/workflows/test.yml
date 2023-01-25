@@ -4,6 +4,8 @@ on:
   workflow_dispatch:
   push:
 
+evironment: GitHub Actions
+
 env:
   MEDIA_ROOT: ${{ vars.MEDIA_ROOT }}
   EMAIL_FILE_PATH: ${{ vars.EMAIL_FILE_PATH }}
