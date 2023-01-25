@@ -14,11 +14,11 @@ jobs:
   display-variables:
     name: Display Variables
     runs-on: ubuntu-latest
-    environment: GitHub Actions
+    environment: github actions
     steps:
       - name: Use variables
         run: |
-          echo "media root : ${{ env.MEDIA_ROOT }}"
-          echo "email file path : ${{vars.EMAIL_FILE_PATH}}"
-          echo "edc base dir logs : $EDC_BASE_DIR_FOR_LOGS"
+          echo "media root : ${MEDIA_ROOT}"
+          echo "email file path : ${EMAIL_FILE_PATH}"
+          echo "edc base dir logs : ${EDC_BASE_DIR_FOR_LOGS}"
           echo "coveralls repo token str  : ${COVERALLS_REPO_TOKEN_STR}"
