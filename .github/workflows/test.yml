@@ -4,8 +4,6 @@ on:
   workflow_dispatch:
   push:
 
-environment: GitHub Actions
-
 env:
   MEDIA_ROOT: ${{ vars.MEDIA_ROOT }}
   EMAIL_FILE_PATH: ${{ vars.EMAIL_FILE_PATH }}
@@ -16,6 +14,7 @@ jobs:
   display-variables:
     name: Display Variables
     runs-on: ubuntu-latest
+    environment: GitHub Actions
     steps:
       - name: Use variables
         run: |
